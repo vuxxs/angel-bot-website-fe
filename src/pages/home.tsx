@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import UserHeader from "@/components/UserHeader";
 import CenterLogo from "@/components/Logo";
+import Layout from "@/components/Layout";
 
 const HomePage = ({ user }: any) => {
   const username = user?.global_name;
@@ -13,10 +14,10 @@ const HomePage = ({ user }: any) => {
   }, []); // No dependencies, run only once
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-indigo-800">
+    <Layout>
       <UserHeader username={username} avatarURL={avatarURL} />
       <CenterLogo />
-    </div>
+    </Layout>
   );
 };
 
