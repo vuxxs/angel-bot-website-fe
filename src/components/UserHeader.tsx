@@ -18,7 +18,8 @@ const UserHeader = ({
         </div>
         <div className="w-16 h-16 rounded-full overflow-hidden">
           <Image
-            src={avatarURL || "/default-user.logo.png"}
+            // FIXME Update to default-user-logo.png
+            src={avatarURL || "/temp-default-user-logo.png"}
             alt="Logo"
             className="mx-auto"
             width={64}
