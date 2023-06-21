@@ -1,3 +1,5 @@
+// TODO Move link to .env
+
 const LoginButton = () => {
   return (
     <header className="w-full flex justify-end p-5">
