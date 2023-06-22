@@ -30,33 +30,19 @@ const HomePage = ({ user, guilds }: { user: any; guilds: Guild[] }) => {
 };
 
 export async function getServerSideProps(context: any) {
-  const { req, query } = context;
-  const { code } = query;
-
-  if (!code) {
-    return {
-      redirect: {
-        destination: "/",
-        permanent: false,
-      },
-    };
-  }
-
   try {
-    const response = await fetch(`http://localhost:3001/login?code=${code}`);
+    const response = await fetch("http://localhost:3001/session");
 
     if (!response.ok) {
-      // console.error("Server responded with an error", response.status);
       return {
         redirect: {
-          destination: "/",
+          destination: "/404",
           permanent: false,
         },
       };
     }
-    const json = await response.json();
 
-    console.log(json.guilds);
+    const json = await response.json();
 
     return {
       props: {
@@ -64,11 +50,11 @@ export async function getServerSideProps(context: any) {
         guilds: json.guilds,
       },
     };
-  } catch (error) {
-    console.error("An error occurred while fetching user data", error);
+  } catch (err) {
+    console.error(err);
     return {
       redirect: {
-        destination: "/",
+        destination: "/404",
         permanent: false,
       },
     };
