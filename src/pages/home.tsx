@@ -31,7 +31,12 @@ const HomePage = ({ user, guilds }: { user: any; guilds: Guild[] }) => {
 
 export async function getServerSideProps(context: any) {
   try {
-    const response = await fetch("http://localhost:3001/session");
+    const cookie = context.req.headers.cookie;
+    const response = await fetch("http://localhost:3001/session", {
+      headers: {
+        cookie: cookie,
+      },
+    });
 
     if (!response.ok) {
       return {
