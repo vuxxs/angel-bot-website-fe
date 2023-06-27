@@ -1,5 +1,6 @@
 import { FC, useState } from "react";
 
+// TODO add usage once implemented to angel-bot
 interface ExpandableTextProps {
   name: string;
   description: string;
