@@ -38,3 +38,4 @@ next-env.d.ts
 /public/temp-logo.png
 /public/temp-default-user-icon.png
 /public/temp-default-server-icon.png
+/.env
