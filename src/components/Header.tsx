@@ -21,7 +21,7 @@ const Header = ({ user: initialUser }: any) => {
           console.error(error);
         });
     }
-  }); // Empty dependency array means this effect runs once on mount
+  });
 
   const username = user?.global_name;
   const avatarURL = `https://cdn.discordapp.com/avatars/${user?.id}/${user?.avatar}.png?size=4096`;
