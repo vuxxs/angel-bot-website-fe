@@ -17,7 +17,6 @@ interface UsagePageProps {
 const UsagePage: FC<UsagePageProps> = ({ commands }) => {
   return (
     <Layout>
-      <Header />
       <h1 className="text-center text-2xl font-bold mb-8 -ox">Usage</h1>
       <div className="flex flex-col items-center">
         {commands.map((command, index) =>

@@ -15,8 +15,7 @@ const HomePage = ({ user, guilds }: { user: any; guilds: Guild[] }) => {
   }, []); // No dependencies, run only once
 
   return (
-    <Layout>
-      <Header user={user} />
+    <Layout user={user}>
       <CenterLogo />
       <div className="flex flex-wrap justify-center">
         {guilds.map((guild) => (
