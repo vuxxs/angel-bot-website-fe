@@ -12,7 +12,7 @@ const BackToIndexButton = () => {
       <p className="text-white">Page Not Found</p>
       <button
         onClick={goBackHome}
-        className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 mt-2 rounded border-white border-2"
+        className="bg-red-500 hover:bg-red-700 mt-2 angel-square-button"
       >
         Back to Start
       </button>
