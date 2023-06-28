@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import LoginButton from "./LoginButton";
 import UserHeader from "./UserHeader";
+import UsageButton from "./UsageButton";
+import styles from "@/styles/header.module.css";
 
 const Header = ({ user: initialUser }: any) => {
   const [user, setUser] = useState(initialUser);
@@ -27,9 +29,15 @@ const Header = ({ user: initialUser }: any) => {
   const avatarURL = `https://cdn.discordapp.com/avatars/${user?.id}/${user?.avatar}.png?size=4096`;
 
   return user ? (
-    <UserHeader username={username} avatarURL={avatarURL} />
+    <header className={styles["angel-header"]}>
+      <UserHeader username={username} avatarURL={avatarURL} />
+      <UsageButton />
+    </header>
   ) : (
-    <LoginButton />
+    <header className={styles["angel-header"]}>
+      <LoginButton />
+      <UsageButton />
+    </header>
   );
 };
 
