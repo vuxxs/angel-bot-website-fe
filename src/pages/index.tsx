@@ -5,7 +5,6 @@ import CenterLogo from "@/components/Logo";
 export default function Home() {
   return (
     <Layout>
-      <Header />
       <CenterLogo />
     </Layout>
   );
