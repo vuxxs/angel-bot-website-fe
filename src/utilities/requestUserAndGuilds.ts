@@ -1,4 +1,4 @@
-export default async function requestUser(context: any) {
+export default async function requestUserAndGuilds(context: any) {
   try {
     const cookie = context.req.headers.cookie;
     const response = await fetch("http://localhost:3001/session", {
