@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import CenterLogo from "@/components/Logo";
 import Layout from "@/components/Layout";
 import GuildButton from "@/components/GuildButton";
-import requestUser from "@/utilities/requestUser";
+import requestUserAndGuilds from "@/utilities/requestUserAndGuilds";
 import OAuthGuild from "@/types/OauthGuild";
 
 // TODO Make a user type
@@ -26,7 +26,7 @@ const HomePage = ({ user, guilds }: { user: any; guilds: OAuthGuild[] }) => {
 };
 
 export async function getServerSideProps(context: any) {
-  return requestUser(context);
+  return requestUserAndGuilds(context);
 }
 
 export default HomePage;
