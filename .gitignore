@@ -33,3 +33,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# testing
+/public/temp-logo.png
+/public/temp-default-user-icon.png
+/public/temp-default-server-icon.png
+/.env
