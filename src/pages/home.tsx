@@ -1,13 +1,12 @@
 import { useEffect } from "react";
 import CenterLogo from "@/components/Logo";
 import Layout from "@/components/Layout";
-import { Guild } from "discord.js";
 import GuildButton from "@/components/GuildButton";
-import Header from "@/components/Header";
 import requestUser from "@/utilities/requestUser";
+import OAuthGuild from "@/types/OauthGuild";
 
-// TODO Update user type to User when global_name is released by discord.js team
-const HomePage = ({ user, guilds }: { user: any; guilds: Guild[] }) => {
+// TODO Make a user type
+const HomePage = ({ user, guilds }: { user: any; guilds: OAuthGuild[] }) => {
   useEffect(() => {
     if (typeof window != "undefined") {
       window.history.replaceState({}, document.title, "/home");
