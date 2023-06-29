@@ -1,8 +1,8 @@
-import { Guild } from "discord.js";
+import OAuthGuild from "@/types/OauthGuild";
 import Image from "next/image";
 import Link from "next/link";
 
-const GuildButton = ({ guild }: { guild: Guild }) => {
+const GuildButton = ({ guild }: { guild: OAuthGuild }) => {
   const { id, name, icon } = guild;
   const iconUrl = icon
     ? `https://cdn.discordapp.com/icons/${id}/${icon}.png`
